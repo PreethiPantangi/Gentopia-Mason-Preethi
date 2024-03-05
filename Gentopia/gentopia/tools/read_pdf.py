@@ -24,7 +24,7 @@ class ReadPDF(BaseTool):
             reader = PyPDF2.PdfReader(pdf_file)
             information = ""
             for num in range(len(reader.pages)):
-                page = reader.getPage(num)
+                page = reader.pages(num)
                 information += page.extractText()
         return information
         # return "This will read the pdf and return information!"
