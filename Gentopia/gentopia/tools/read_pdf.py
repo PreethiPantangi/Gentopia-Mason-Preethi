@@ -1,4 +1,5 @@
 from typing import AnyStr
+from pathlib import Path
 from gentopia.tools.basetool import *
 
 
@@ -16,6 +17,8 @@ class ReadPDF(BaseTool):
     args_schema: Optional[Type[BaseModel]] = ReadPDFArgs
 
     def _run(self, query: AnyStr) -> str:
+        read_file = Path(query)
+        print(read_file)
         return "This will read the pdf and return information!"
 
     async def _arun(self, *args: Any, **kwargs: Any) -> Any:
