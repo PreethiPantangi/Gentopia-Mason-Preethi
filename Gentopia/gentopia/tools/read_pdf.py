@@ -5,7 +5,7 @@ from gentopia.tools.basetool import *
 
 
 class ReadPDFArgs(BaseModel):
-    query: str = Field(..., description="query relating to reading a pdf with file name")
+    file_path: str = Field(..., description="query relating to reading a pdf with file name")
 
 
 class ReadPDF(BaseTool):
