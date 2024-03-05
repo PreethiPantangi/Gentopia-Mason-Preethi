@@ -20,14 +20,11 @@ class ReadPDF(BaseTool):
     def _run(self, file_path: AnyStr) -> str:
         with open(str(file_path), 'rb') as pdf_file:
             reader = PyPDF2.PdfReader(pdf_file)
-            information = []
-            text = ""
+            information = ""
             for num in range(len(reader.pages)):
                 page = reader.pages[num]
-                text += page.extract_text()
-                if(num == (len(reader.pages)/2)):
-                    information.append(text)
-                    text = ""
+                information += page.extract_text()
+                
         return information
 
     async def _arun(self, *args: Any, **kwargs: Any) -> Any:
