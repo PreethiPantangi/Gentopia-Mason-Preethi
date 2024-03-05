@@ -1,3 +1,4 @@
+from typing import AnyStr
 from gentopia.tools.basetool import *
 
 
