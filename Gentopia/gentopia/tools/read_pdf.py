@@ -1,5 +1,6 @@
 from typing import AnyStr
 from pathlib import Path
+import PyPDF2
 from gentopia.tools.basetool import *
 
 
@@ -16,10 +17,17 @@ class ReadPDF(BaseTool):
 
     args_schema: Optional[Type[BaseModel]] = ReadPDFArgs
 
-    def _run(self, query: AnyStr) -> str:
-        read_file = Path(query)
+    def _run(self, file_path: AnyStr) -> str:
+        read_file = Path(file_path)
         print(read_file)
-        return "This will read the pdf and return information!"
+        with open(read_file, 'rb') as pdf_file:
+            reader = PyPDF2.PdfFileReader(pdf_file)
+            information = ""
+            for num in range(reader.numPages):
+                page = reader.getPage(num)
+                information += page.extractText()
+        return information
+        # return "This will read the pdf and return information!"
 
     async def _arun(self, *args: Any, **kwargs: Any) -> Any:
         raise NotImplementedError
