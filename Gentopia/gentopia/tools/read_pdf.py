@@ -21,7 +21,7 @@ class ReadPDF(BaseTool):
         read_file = Path(file_path)
         print(read_file)
         with open(read_file, 'rb') as pdf_file:
-            reader = PyPDF2.PdfFileReader(pdf_file)
+            reader = PyPDF2.PdfReader(pdf_file)
             information = ""
             for num in range(reader.numPages):
                 page = reader.getPage(num)
