@@ -19,13 +19,12 @@ class ReadPDF(BaseTool):
 
     def _run(self, file_path: AnyStr) -> str:
         read_file = Path(file_path)
-        print(read_file)
-        with open(read_file, 'rb') as pdf_file:
+        with open(str(file_path), 'rb') as pdf_file:
             reader = PyPDF2.PdfReader(pdf_file)
             information = ""
             for num in range(len(reader.pages)):
-                page = reader.pages(num)
-                information += page.extractText()
+                page = reader.pages[num]
+                information += page.extract_text()
         return information
         # return "This will read the pdf and return information!"
 
