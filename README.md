@@ -1,10 +1,5 @@
 # Gentopia-Mason
 
-**IMPORTANT NOTICE: This code repository was adapted from [Gentopia-Mason](https://github.com/LittleYUYU/Gentopia-Mason/) to support Mason Activities.** 
-
-Author: Preethi Pantangi (spantang@gmu.edu)
-Copyright and license should go to Gentopia-Mason.
-
 ## Installation 💻
 First, clone this repository:
 ```
