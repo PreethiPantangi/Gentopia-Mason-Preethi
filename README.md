@@ -1,15 +1,15 @@
 # Gentopia-Mason
 
-**IMPORTANT NOTICE: This code repository was adapted from [Gentopia.AI](https://github.com/Gentopia-AI) to support Mason Activities.** 
+**IMPORTANT NOTICE: This code repository was adapted from [Gentopia-Mason](https://github.com/LittleYUYU/Gentopia-Mason/) to support Mason Activities.** 
 
-Author: Ziyu Yao (ziyuyao@gmu.edu)
-Copyright and license should go to Gentopia.AI.
+Author: Preethi Pantangi (spantang@gmu.edu)
+Copyright and license should go to Gentopia-Mason.
 
 ## Installation 💻
 First, clone this repository:
 ```
 git clone git@github.com:LittleYUYU/Gentopia-Mason.git
-cd Gentopia-Mason
+cd Gentopia-Mason-Preethi
 ```
 Next, we will create a virtual environment and install the library:
 ```
