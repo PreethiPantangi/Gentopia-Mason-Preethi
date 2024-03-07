@@ -8,7 +8,7 @@ Copyright and license should go to Gentopia-Mason.
 ## Installation 💻
 First, clone this repository:
 ```
-git clone git@github.com:LittleYUYU/Gentopia-Mason.git
+git clone https://github.com/PreethiPantangi/Gentopia-Mason-Preethi.git
 cd Gentopia-Mason-Preethi
 ```
 Next, we will create a virtual environment and install the library:
